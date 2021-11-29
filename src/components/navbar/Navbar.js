@@ -109,11 +109,11 @@ export const Navbar = ({ account, connectWallet }) => {
         <AppBar position="static">
           <Toolbar>
             <Link to="/" className="whiteLink">
-              <img src={logo} alt="logo" className="logo" />
+             
             </Link>
             <Link to="/" className="whiteLink">
               <Typography className="title" variant="h6" noWrap>
-                PetGram
+                Dress up NFT
               </Typography>
             </Link>
             <Button className="whiteLink" component={Link} to="/">
@@ -121,7 +121,7 @@ export const Navbar = ({ account, connectWallet }) => {
             </Button>
 
             <Button className="whiteLink" component={Link} to="/create-pet">
-              Create Pet
+              Create Avatar
             </Button>
 
             <div className="grow" />

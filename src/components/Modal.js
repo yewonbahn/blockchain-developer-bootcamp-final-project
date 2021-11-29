@@ -8,24 +8,6 @@ const Modal = (props) => {
 
     const { open, close, header, hash } = props;
     const [nftName, setNftName] = useState("initial value")
-
-    // 그림을 IPFS로부터 가져옴
-    const getIPFS = () => {
-        const ipfsApi = require('ipfs-api');
-        const ipfs = ipfsApi('ipfs.infura.io', 5001, { protocol: "https" })
-        const cidIPFS = hash;
-
-        ipfs.files.get(cidIPFS, (err, result) => { // Download buffer from IPFS
-            var imgFile = result[0].content.toString('utf8');
-            document.getElementById("Captured").src = imgFile;
-        });
-    };
-
-    function set() {
-        setNftName(document.getElementById("input").value)
-        console.log(nftName)
-    }
-
    
         return (
             <div className={open ? 'openModal modal' : 'modal'}>
@@ -36,12 +18,12 @@ const Modal = (props) => {
                             <button className="close" onClick={close}> &times; </button>
                         </header>
                         <main>
-                            <img id="Captured" />
-                            {getIPFS()}
+                        
                             <div>
-                                <div className="input ">NFT Name</div>
-                                <input className="input2" type="text" id="input" onChange={set}></input>
+                                <div className="input ">Character creation is complete!<br/>
+                                Go to Home and try minting!</div>
                             
+                
                             </div>
                         </main>
                         <footer>

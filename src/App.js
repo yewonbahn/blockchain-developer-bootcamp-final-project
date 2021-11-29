@@ -4,12 +4,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Navbar } from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import Home from './components/home/Home'
-// import PetDetails from './components/home-container/pet-details/PetDetails'
+import './components/footer/Footer.css'
+import PetDetails from './components/pet-details/PetDetails'
 import CreatePet from './components/CreateAvatar'
 
 
 import Web3 from 'web3'
-// import MyPet from './abis/Pet.json'
+import MyAvatar from './abis/Avatar.json'
 import { useState } from 'react'
 
 
@@ -30,28 +31,28 @@ function App() {
     }
   }
 
-  // const getContract = async () => {
-  //   const web3 = window.web3
-  //   const accounts = await web3.eth.getAccounts()
-  //   setAccount(accounts[0])
-  //   const networkId = await web3.eth.net.getId()
-  //   const networkData = MyPet.networks[networkId]
+  const getContract = async () => {
+    const web3 = window.web3
+    const accounts = await web3.eth.getAccounts()
+    setAccount(accounts[0])
+    const networkId = await web3.eth.net.getId()
+    const networkData = MyAvatar.networks[networkId]
   
-  //   if (networkData) {
-  //     const abi = MyPet.abi
-  //     const address = MyPet.networks[networkId].address
-  //     const myContract = new web3.eth.Contract(abi, address)
-  //     setContractData(myContract)
-  //   } else {
-  //     window.alert(
-  //       'Contract is not deployed to the detected network. Connect to the correct network!',
-  //     )
-  //   }
-  // }
+    if (networkData) {
+      const abi = MyAvatar.abi
+      const address = MyAvatar.networks[networkId].address
+      const myContract = new web3.eth.Contract(abi, address)
+      setContractData(myContract)
+    } else {
+      window.alert(
+        'Contract is not deployed to the detected network. Connect to the correct network!',
+      )
+    }
+  }
 
   const connectWallet = async () => {
     await loadWeb3()
-    // await getContract()
+    await getContract()
   }
 
   return (
@@ -62,10 +63,10 @@ function App() {
         <Switch>
           <Route exact path="/create-pet" component={CreatePet} />
           <Route path="/pet-details/:petId">
-          {/* <PetDetails account={account} contractData={contractData} /> */}
+          <PetDetails account={account} contractData={contractData} />
           </Route>
         </Switch>
-        <Footer />
+        <Footer className="hi"/>
       </div>
     </Router>
   )

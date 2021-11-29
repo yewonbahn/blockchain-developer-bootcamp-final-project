@@ -1,13 +1,13 @@
 import logo from '../logo.svg';
 import './App.css';
-import Modal from '../Modal.js';
+import Modal from './Modal.js';
 import React, { useEffect, useState, useRef } from "react";
 import html2canvas from 'html2canvas';
 import { NFTStorage, File } from 'nft.storage';
 import { apiKey } from '../APIKEYS';
-
+import { useHistory } from 'react-router-dom'
 const CreateAvatar=() =>{
-
+  const history = useHistory()
   const [loading, setLoading] = useState(false)
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = () => {
@@ -17,7 +17,7 @@ const CreateAvatar=() =>{
     setModalOpen(false);
   }
   const [image, setImage] = useState('')
-
+  const [newimage, setnewImage] = useState('')
   const [hash, setHash] = useState("0");
 
 // const create=(e)=>{
@@ -64,26 +64,55 @@ const create=async (event) =>{
   
   }).then(async function (canvas) {
     myImg = canvas.toDataURL("image/png");
- 
+    var newImage = "";
+    canvas.toBlob(myImg => {
+      
+      newImage = new File([myImg], "image.png")
 
-
-    try {
-      setLoading(true)
-      const client = new NFTStorage({ token: apiKey })
-      const metadata = await client.store({
-        name: "yewon",
-        description: "example",
-        image: new File([myImg], "", { type: "image/png" }),
-      })
-      if (metadata) {
-        console.log(metadata)
+      try {
+        setLoading(true)
+      
+        console.log(newImage)
+        const client = new NFTStorage({ token: apiKey })
+        const metadata = client.store({
+          name: "yewon",
+          description: "example",
+          image: new File([newImage], "image.png", { type: "image/png" }),
+        })
+        if (metadata) {
+          
+          console.log(metadata)
+        }
+      } catch (error) {
+        console.log(error)
+        setLoading(false)
+      
       }
-    } catch (error) {
-      console.log(error)
-      setLoading(false)
+    });
+    // var pngBuffer = Buffer(myImg);
+    console.log(new File([myImg], "image.png"))
+    // try {
+    //   setLoading(true)
     
-    }
+    //   console.log(newImage)
+    //   const client = new NFTStorage({ token: apiKey })
+    //   const metadata = await client.store({
+    //     name: "yewon",
+    //     description: "example",
+    //     image: new File([newImage], "image.png", { type: "image/png" }),
+    //   })
+    //   if (metadata) {
+    //     history.push('/')
+    //     console.log(metadata)
+    //   }
+    // } catch (error) {
+    //   console.log(error)
+    //   setLoading(false)
+    
+    // }
    });
+
+   openModal();
 }
   let state = {
     dress: 0,
@@ -161,14 +190,7 @@ const create=async (event) =>{
     }
       }}>face➡</button>
     </div>
-    <div id="linksBox">
-      <a href="https://www.instagram.com/the_lonelymoongirl/"
-        ><img src="./images4/insta2.png" alt="insta" height="50px"
-      /></a>
-      <a href="https://www.amazon.co.uk/Lonely-Moongirl-Hazie/dp/1699887489"
-        ><img src="./images4/amazon.jpg" height="50px"
-      /></a>
-    </div>
+ 
     <button onClick={create}>mint</button>
     <Modal open={modalOpen} close={closeModal} header="" hash={hash}>
           </Modal>

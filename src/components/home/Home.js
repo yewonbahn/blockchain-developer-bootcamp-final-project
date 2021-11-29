@@ -1,7 +1,7 @@
 import React from 'react'
 import { StylesProvider, Chip, Container } from '@material-ui/core'
 import './Home.css'
-// import PetGallery from '../gallery/PetGallery'
+import PetGallery from '../gallery/PetGallery'
 
 function Home() {
 
@@ -22,7 +22,7 @@ function Home() {
             clickable
           />
         </div>
-        {/* <PetGallery /> */}
+        <PetGallery />
       </Container>
     </StylesProvider>
   )
