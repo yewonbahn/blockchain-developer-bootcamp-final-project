@@ -26,3 +26,14 @@ NFT Avatar
 
 In Create Avatar, you can make the avatar you want by choosing "hair", "dress", "shoes", "accessory", and "face".
 
+### Directory structure
+
+
+* contracts: Smart contracts that are deployed in the Ropsten testnet.
+* migrations: Migration files for deploying contracts in contracts directory.
+* test: Tests for smart contracts.
+* src: Project's React frontend.
+
+### Environment variables
+ROPSTEN_INFURA_PROJECT_ID=
+ROPSTEN_MNEMONIC=
