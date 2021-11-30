@@ -26,14 +26,20 @@ NFT Avatar
 
 In Create Avatar, you can make the avatar you want by choosing "hair", "dress", "shoes", "accessory", and "face".
 
-### Directory structure
-
+## Directory structure
 
 * contracts: Smart contracts that are deployed in the Ropsten testnet.
 * migrations: Migration files for deploying contracts in contracts directory.
 * test: Tests for smart contracts.
 * src: Project's React frontend.
+## Dapp structure
+* connect wallet! (if you don't set MNEMONIC in file, it can be not working)
+* go to "Create Avatar"
+* create your own avatar!!
+* go to home and check your avatar made. (this display have all of your avatar creation)
+* click "view" button and minting it!
+* metamask pop up and you can transcation!
 
-### Environment variables
+## Environment variables
 ROPSTEN_INFURA_PROJECT_ID=
 ROPSTEN_MNEMONIC=
