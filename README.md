@@ -4,7 +4,7 @@
 
 this is blockchain-developer-bootcamp-final-project from consensys
 
-## Available Scripts
+## Start
 
 In the project directory, you can run:
 
