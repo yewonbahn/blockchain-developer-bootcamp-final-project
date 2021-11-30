@@ -15,7 +15,7 @@ Also, use the test kovan network account MNEMONIC in .env!
 (+Get faucet from kovan network)
 
 ### npm install
-### npm install
+
 ### npm start
 
 The project, you can create NFT Avatar, and go to home
