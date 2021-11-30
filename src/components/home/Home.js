@@ -11,16 +11,12 @@ function Home() {
         <div className="label-btns">
           <Chip
             size="medium"
-            label="Today NFTS"
+            label="Creation"
             color="primary"
             clickable
           />
 
-          <Chip
-            size="medium"
-            label="Last Week"
-            clickable
-          />
+         
         </div>
         <PetGallery />
       </Container>

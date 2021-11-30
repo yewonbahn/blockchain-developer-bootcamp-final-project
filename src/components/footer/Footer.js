@@ -18,7 +18,7 @@ function Footer() {
         <AppBar className="primary-color marginT-3 pad-2" position="static">
           <Grid component={Container} container>
             <Grid item xs={12} sm={3}>
-              <img src={logo} alt="logo" className="footer-logo" />
+             
             </Grid>
 
             <Grid item xs={12} sm={9} className="links">
@@ -56,7 +56,7 @@ function Footer() {
 
             <Grid item xs={12} sm={9}>
               <Typography className="copyright">
-                Copyright &copy; {new Date().getFullYear()} PetGram
+                Copyright &copy; {new Date().getFullYear()} NFT AVATAR
               </Typography>
             </Grid>
           </Grid>

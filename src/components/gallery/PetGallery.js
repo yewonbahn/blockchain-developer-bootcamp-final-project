@@ -91,7 +91,8 @@ function PetGallery() {
             </Grid>
           ))
         ) : (
-          <h2>No Pets Yet...</h2>
+          <h2>No Avatars Yet... <br/>Create Avatar!</h2>
+        
         )}
       </Grid>
     </div>

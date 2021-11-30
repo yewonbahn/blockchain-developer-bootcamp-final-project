@@ -19,6 +19,6 @@
     padding-bottom: 1rem;
 }
 .hi{
-    position: absolute;
-    top:1000px;
+    position:relative;
+
 }
