@@ -1,22 +1,37 @@
+require('dotenv').config()
+const HDWalletProvider = require('@truffle/hdwallet-provider')
+const mnemonic = process.env.MNEMONIC.toString().trim()
+
+
 module.exports = {
-  // See <http://truffleframework.com/docs/advanced/configuration>
-  // for more about customizing your Truffle configuration!
   networks: {
     development: {
-      host: "127.0.0.1",
+      host: '127.0.0.1',
       port: 7545,
-      network_id: "*" // Match any network id
+      network_id: '*', // Match any network id
     },
-    develop: {
-      port: 8545
+    kovan: {
+      provider: () =>
+        new HDWalletProvider(
+          mnemonic,
+          `https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161`,
+        ),
+      network_id: 42,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true,
     },
-  
-
   },
   contracts_build_directory: './src/abis/',
   compilers: {
     solc: {
-      version: "^0.6.0"
-    }
-  }
-};
+      version: '^0.6.0',
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
+
+
+}

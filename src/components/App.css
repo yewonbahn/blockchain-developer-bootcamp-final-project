@@ -175,15 +175,15 @@ button:hover {
   z-index: 4;
 }
 
-/* .dress2 {
-  background-image: url("./images4/dress2.png");
+ .dress2 {
+  background-image: url("./images4/dress_2.png");
   background-repeat: no-repeat;
   position: absolute;
   height:500px;
   width: 400px;
   z-index: 4;
 }
-.dress3 {
+/* .dress3 {
   background-image: url("./images4/dress3.png");
   background-repeat: no-repeat;
   position: absolute;
@@ -222,7 +222,7 @@ button:hover {
   height: 500px;
   width: 400px;
   z-index: 4;
-} */
+} */ 
 
 /* .shoes1 {
   background-image: url("./images4/shoes1 2.png");
@@ -246,15 +246,15 @@ button:hover {
   width: 400px;
 } */
 
-/* .hat1 {
-  background-image: url("./images4/accessory1.png");
+ .hat1 {
+  background-image: url("./images4/hat0.png");
   background-repeat: no-repeat;
   position: absolute;
   height: 500px;
   width: 400px;
 }
 
-.hat2 {
+/* .hat2 {
   background-image: url("./images4/accessory2.png");
   background-repeat: no-repeat;
   position: absolute;
@@ -275,7 +275,7 @@ button:hover {
   position: absolute;
   height: 500px;
   width: 400px;
-} */
+} */ 
 
 .hair0 {
   background-image: url("./images4/hair 0.png");
@@ -298,27 +298,27 @@ button:hover {
   height:500px;
   width: 400px;
 }
-/* .hair3 {
-  background-image: url("./images4/hair3.png");
+ .hair3 {
+  background-image: url("./images4/hair_4.png");
   background-repeat: no-repeat;
   position: absolute;
   height:500px;
   width: 400px;
 }
 .hair4 {
-  background-image: url("./images4/hair4.png");
+  background-image: url("./images4/hair_5.png");
   background-repeat: no-repeat;
   position: absolute;
   height: 500px;
   width: 400px;
 }
-.hair5 {
+/* .hair5 {
   background-image: url("./images4/hair5.png");
   background-repeat: no-repeat;
   position: absolute;
   height: 500px;
   width: 400px;
-} */
+} */ 
 
 .face1 {
   background-image: url("./images4/face_1.png");
@@ -328,16 +328,16 @@ button:hover {
   width: 400px;
 }
 .face2 {
+  background-image: url("./images4/face_2.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  height:500px;
+  width: 400px;
+}
+.face3 {
   background-image: url("./images4/face_3.png");
   background-repeat: no-repeat;
   position: absolute;
   height:500px;
   width: 400px;
 }
-/* .face3 {
-  background-image: url("./images4/face_3.png");
-  background-repeat: no-repeat;
-  position: absolute;
-  height:500px;
-  width: 400px;
-} */

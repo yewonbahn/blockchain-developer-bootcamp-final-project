@@ -181,17 +181,17 @@ const create=async (event) =>{
       }}>accessory➡</button>
       <button id="nextface" onClick={(e)=>{
            let face = document.querySelector("#face");
-    if (state.face < 2) {
+    if (state.face < 3) {
       state.face++;
       face.setAttribute("class", `face${state.face}`);
-    } else if (state.face === 2) {
+    } else if (state.face === 3) {
       state.face = 0;
       face.setAttribute("class", `face${state.face}`);
     }
       }}>face➡</button>
     </div>
  
-    <button onClick={create}>mint</button>
+    <button onClick={create}>Create Avatar</button>
     <Modal open={modalOpen} close={closeModal} header="" hash={hash}>
           </Modal>
         
