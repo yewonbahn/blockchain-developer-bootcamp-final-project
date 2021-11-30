@@ -8,12 +8,12 @@ this is blockchain-developer-bootcamp-final-project from consensys
 
 In the project directory, you can run:
 
-Subscribe to nft.storage for ipfs use, and then create api keys.
+Subscribe to [nft.storage](https://nft.storage/) for ipfs use, and then create api keys.
 And
 Change the apiKey value in /src/APIKEYS.js!
 
 Also, use the test kovan network account MNEMONIC in .env!
-(+Get faucet from kovan network)
+(+Get [faucet](https://faucets.chain.link/) from kovan network)
 
 ### npm install
 
