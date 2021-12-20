@@ -43,3 +43,7 @@ In Create Avatar, you can make the avatar you want by choosing "hair", "dress", 
 ## Environment variables
 ROPSTEN_INFURA_PROJECT_ID=
 ROPSTEN_MNEMONIC=
+
+public Ethereum account
+
+0xA96e16Cdc8c47e1E1E754af62a36D0d4ac7B7c67
